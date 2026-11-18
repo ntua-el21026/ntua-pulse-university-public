@@ -1,0 +1,5 @@
+genre_id  genre_name  year1  year2  perf_count
+--------  ----------  -----  -----  ----------
+5         Electronic  2017   2018   10
+4         Hip Hop     2026   2027   7
+2         Pop         2016   2017   11

@@ -1,0 +1,264 @@
+DEBUG: Entered test_cli.sh
+DB137=python3 ./../cli/db137.py
+/usr/bin/bash
+
+========== USER COMMANDS TEST ==========
+Working dir: /mnt/c/Projects/DB25_137/test
+Database: pulse_university
+Output: test_cli_results.txt
+========================================
+
+▶ Drop pulse_university DB...
+Command: python3 ./../cli/db137.py drop-db --database pulse_university --yes
+[OK] Schema `pulse_university` dropped.
+[PASS] Drop pulse_university DB
+
+▶ Create pulse_university DB...
+Command: python3 ./../cli/db137.py create-db
+[OK] install.sql
+[OK] indexing.sql
+[OK] procedures.sql
+[OK] triggers.sql
+[OK] views.sql
+[OK] Database schema deployed.
+[PASS] Create pulse_university DB
+
+▶ Drop user testuser1 (if exists)...
+Command: python3 ./../cli/db137.py users drop testuser1
+[WARN] User `testuser1` not found on '%' or 'localhost'.
+[OK] Dropped user testuser1.
+[PASS] Drop user testuser1 (if exists)
+
+▶ Drop user testuser2 (if exists)...
+Command: python3 ./../cli/db137.py users drop testuser2
+[WARN] User `testuser2` not found on '%' or 'localhost'.
+[OK] Dropped user testuser2.
+[PASS] Drop user testuser2 (if exists)
+
+▶ Drop user testuser3 (if exists)...
+Command: python3 ./../cli/db137.py users drop testuser3
+[WARN] User `testuser3` not found on '%' or 'localhost'.
+[OK] Dropped user testuser3.
+[PASS] Drop user testuser3 (if exists)
+
+▶ Register testuser1 with basic privileges...
+[REDACTED database account, host, or credential detail]
+[OK] Registered `testuser1` with privileges on `pulse_university` for % and localhost
+[OK] [REDACTED database account, host, or credential detail]
+[PASS] Register testuser1 with basic privileges
+
+▶ Current grants for testuser1:
+
+▶ Register testuser2 with default privileges...
+[REDACTED database account, host, or credential detail]
+[OK] Registered `testuser2` with privileges on `pulse_university` for % and localhost
+[OK] [REDACTED database account, host, or credential detail]
+[PASS] Register testuser2 with default privileges
+
+▶ Current grants for testuser2:
+
+▶ List all users...
+Command: python3 ./../cli/db137.py users list
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[PASS] List all users
+
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+Before:
+[REDACTED database account, host, or credential detail]
+  - DELETE
+  - INSERT
+  - SELECT
+  - UPDATE
+[OK] %: re-granted: DELETE,SELECT,UPDATE
+[OK] localhost: re-granted: DELETE,SELECT,UPDATE
+[OK] Revoked INSERT on pulse_university from testuser1.
+After:
+[REDACTED database account, host, or credential detail]
+  - DELETE
+  - SELECT
+  - UPDATE
+PASS [REDACTED database account, host, or credential detail]
+
+▶ Current grants for testuser1:
+
+[REDACTED database account, host, or credential detail]
+Command: python3 ./../cli/db137.py users passwd testuser1 --new-pass NewTest5678!
+[OK] [REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+
+▶ Rename testuser1 to testuser3...
+Command: python3 ./../cli/db137.py users rename testuser1 testuser3
+[OK] testuser1 renamed to testuser3.
+[PASS] Rename testuser1 to testuser3
+
+▶ Current grants for testuser3:
+
+▶ Set default privileges for testuser3 with --show-diff...
+Command: python3 ./../cli/db137.py users set-defaults testuser3 --show-diff
+Before:
+[REDACTED database account, host, or credential detail]
+  - DELETE
+  - SELECT
+  - UPDATE
+After:
+[REDACTED database account, host, or credential detail]
+  - DELETE
+  - INSERT
+  - SELECT
+  - UPDATE
+[OK] Granted default perms to testuser3 on pulse_university.
+[PASS] Set default privileges for testuser3 with --show-diff
+
+▶ Current grants for testuser3:
+
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+Before:
+[REDACTED database account, host, or credential detail]
+  - DELETE
+  - INSERT
+  - SELECT
+  - UPDATE
+Granted INSERT on pulse_university to testuser3.
+After:
+[REDACTED database account, host, or credential detail]
+  - DELETE
+  - INSERT
+  - SELECT
+  - UPDATE
+PASS [REDACTED database account, host, or credential detail]
+
+▶ Current grants for testuser3:
+
+▶ List all users after rename...
+Command: python3 ./../cli/db137.py users list
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[PASS] List all users after rename
+
+▶ Show whoami as testuser3...
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[PASS] Show whoami as testuser3
+
+========== ACCESS CONTROL TESTS ==========
+
+▶ Reject register attempt as testuser2...
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[PASS] Reject register attempt as testuser2 (expected failure)
+Exit code: 0
+
+▶ Reject drop attempt as testuser2...
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[PASS] Reject drop attempt as testuser2 (expected failure)
+Exit code: 0
+
+▶ Reject rename attempt as testuser2 (on another user)...
+PASS [REDACTED database account, host, or credential detail]
+Error: You can only modify your own account.
+[PASS] Reject rename attempt as testuser2 (on another user) (expected failure)
+Exit code: 0
+
+▶ Reject set-defaults attempt as testuser2...
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[PASS] Reject set-defaults attempt as testuser2 (expected failure)
+Exit code: 0
+
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[OK] [REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+
+▶ Drop all test users...
+Command: python3 ./../cli/db137.py users drop-all
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[PASS] Drop all test users
+
+▶ Final users list...
+Command: python3 ./../cli/db137.py users list
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+PASS [REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[REDACTED database account, host, or credential detail]
+[PASS] Final users list
+
+========================================
+Tests completed.
+[REDACTED database account, host, or credential detail]
+

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=80,<83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pulse-db137"
+version = "0.1.0"
+description = "NTUA Team 137 Pulse University database coursework CLI"
+requires-python = ">=3.10"
+dependencies = ["click>=8.1,<9", "mysql-connector-python>=9,<10"]
+
+[project.optional-dependencies]
+web = ["Flask>=3.1,<4", "flask-cors>=5,<7"]
+data = ["python-dotenv>=1,<2"]
+
+[project.scripts]
+db137 = "cli.db137:cli"
+
+[tool.setuptools.packages.find]
+include = ["cli", "cli.*"]

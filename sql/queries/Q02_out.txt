@@ -1,0 +1,17 @@
+artist_id  artist_name        genre_name  participated
+---------  -----------------  ----------  ------------
+1          Artist0 Lastname   Rock        Yes
+5          Artist4 Lastname   Rock        No
+6          Artist5 Lastname   Rock        No
+11         Artist10 Lastname  Rock        No
+16         Artist15 Lastname  Rock        No
+20         Artist19 Lastname  Rock        No
+21         Artist20 Lastname  Rock        No
+26         Artist25 Lastname  Rock        No
+29         Artist28 Lastname  Rock        No
+31         Artist30 Lastname  Rock        No
+33         Artist32 Lastname  Rock        No
+36         Artist35 Lastname  Rock        No
+40         Artist39 Lastname  Rock        No
+41         Artist40 Lastname  Rock        No
+44         Artist43 Lastname  Rock        No

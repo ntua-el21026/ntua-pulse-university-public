@@ -1,0 +1,106 @@
+.
+├── .envrc
+├── .vscode
+├── LICENSE
+├── README.md
+├── cli
+│   ├── README.md
+│   ├── __init__.py
+│   ├── db137.py
+│   └── users
+│       ├── __init__.py
+│       └── manager.py
+├── code
+│   ├── README.md
+│   ├── code_utils
+│   │   ├── dropgen.py
+│   │   ├── fixeof.py
+│   │   └── qgen.py
+│   ├── data_generation
+│   │   ├── faker.py
+│   │   └── faker_sql.py
+│   ├── organization
+│   │   └── struct.py
+│   └── runall.py
+├── diagrams
+│   ├── README.md
+│   ├── er.pdf
+│   └── relational.pdf
+├── docs
+│   ├── README.md
+│   ├── ddl.pdf
+│   ├── main.tex
+│   ├── organization
+│   │   ├── cardinality_constraints.txt
+│   │   ├── db_data.txt
+│   │   └── project_structure.txt
+│   └── report.pdf
+├── frontend
+│   ├── README.md
+│   ├── index.html
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── public
+│   │   ├── frontend_images
+│   │   └── logo.jpg
+│   ├── src
+│   │   ├── App.jsx
+│   │   ├── api
+│   │   ├── auth
+│   │   ├── components
+│   │   ├── hooks
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   │   ├── pages
+│   │   └── tabs
+│   ├── tailwind.config.js
+│   └── vite.config.js
+├── sql
+│   ├── README.md
+│   ├── indexing.sql
+│   ├── install.sql
+│   ├── load.sql
+│   ├── procedures.sql
+│   ├── queries
+│   │   ├── Q01.sql
+│   │   ├── Q01_out.txt
+│   │   ├── Q02.sql
+│   │   ├── Q02_out.txt
+│   │   ├── Q03.sql
+│   │   ├── Q03_out.txt
+│   │   ├── Q04.sql
+│   │   ├── Q04_plan1_out.txt
+│   │   ├── Q04_plan2_out.txt
+│   │   ├── Q04_plan3_out.txt
+│   │   ├── Q05.sql
+│   │   ├── Q05_out.txt
+│   │   ├── Q06.sql
+│   │   ├── Q06_plan1_out.txt
+│   │   ├── Q06_plan2_out.txt
+│   │   ├── Q06_plan3_out.txt
+│   │   ├── Q07.sql
+│   │   ├── Q07_out.txt
+│   │   ├── Q08.sql
+│   │   ├── Q08_out.txt
+│   │   ├── Q09.sql
+│   │   ├── Q09_out.txt
+│   │   ├── Q10.sql
+│   │   ├── Q10_out.txt
+│   │   ├── Q11.sql
+│   │   ├── Q11_out.txt
+│   │   ├── Q12.sql
+│   │   ├── Q12_out.txt
+│   │   ├── Q13.sql
+│   │   ├── Q13_out.txt
+│   │   ├── Q14.sql
+│   │   ├── Q14_out.txt
+│   │   ├── Q15.sql
+│   │   └── Q15_out.txt
+│   ├── triggers.sql
+│   └── views.sql
+└── test
+    ├── README.md
+    ├── test_cli.sh
+    └── test_cli_results.txt
+
+23 directories, 81 files

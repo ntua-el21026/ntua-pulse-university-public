@@ -1,0 +1,55 @@
+# Ignore all .vscode folders
+.vscode/
+
+# Ignore settings.json anywhere
+**/settings.json
+
+# Ignore frontend env files and modules
+# package.json
+# tailwind.config.js
+# vite.config.js
+# postcss.config.js
+node_modules/
+
+# Ignore virtual environment
+venv/
+.venv/
+
+# Ignore db137-related commands
+db137.egg-info/
+
+# Ignore Python bytecode
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore compiled SQL artifacts
+*.sql~
+*.sql.bak
+
+# Ignore log files
+*.log
+
+# Ignore backup or temporary files created by editors
+*~
+*.swp
+*.swo
+*.tmp
+
+# Ignore OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Ignore environment files
+.env
+.env.*
+.envrc
+
+# Optional: ignore build or dist folders
+build/
+dist/
+
+# Editable package build metadata
+*.egg-info/
